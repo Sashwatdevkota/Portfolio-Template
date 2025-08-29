@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4531127e67.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="button">
+            <a href="">
+                <i class="fa-solid fa-house"></i>
+            </a>
+        </div>
+
+        <div class="sociallinks">
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com" target="_blank">
+                        Linkedin
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com" target="_blank">
+                        Github
+                    </a>
+                </li>
+                <li>
+                    <a href="https://x.com" target="_blank">
+                        Twitter
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:fake@fake.com" target="_blank">
+                        Contact me
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </header>
+
+    <main>
+
+        <div id="info">
+            <div class="pagetopic"><b>Name</b></div>
+            <div class="pagedescription" id="skills"></div>
+        </div>
+
+        <div id="portfolio">
+            <div class="projects">
+                <a href="portfolio1.html">
+                    <div class="portfolio_name">Portfolio 1</div>
+                    <div class="portfolio_date">Date 1</div>
+                </a>
+                <hr>
+                <a href="portfolio2.html">
+                    <div class="portfolio_name">Portfolio 2</div>
+                    <div class="portfolio_date">Date 2</div>
+                </a>
+                <hr>
+                <a href="portfolio3.html">
+                    <div class="portfolio_name">Portfolio 3</div>
+                    <div class="portfolio_date">Date 3</div>
+                </a>
+                <hr>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div>&copy; | Created by Sashwat Devkota | Thanks for Visiting </div>
+    </footer>
+
+    <script>
+        const skills = document.getElementById('skills');
+        const dots = ['.', '..', '...', ''];
+        let i = 0;
+
+        setInterval(() => {
+            skills.textContent = 'Enter Skills here' + dots[i];
+            i = (i + 1) % dots.length;
+        }, 500);
+    </script>
+
+</body>
+
+</html>

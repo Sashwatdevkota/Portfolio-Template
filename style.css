@@ -1,0 +1,115 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    background-color: hsl(0, 0%, 6%);
+    color: hsl(0, 0%, 64%);
+    padding-top: 24px;
+    padding-bottom: 16px;
+    margin-left: 25%;
+    margin-right: 25%;
+
+header{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button a{
+    text-decoration: none;
+    color: hsl(0, 0%, 64%);
+}
+
+.button a i{
+    font-size: 22.5px;
+}
+
+.sociallinks ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.sociallinks a{
+    text-decoration: none;
+    color: hsl(0, 0%, 64%);
+    font-size: 15px;
+}
+
+main{
+   margin-top: 80px;
+   flex: 1;
+
+}
+
+main #info .pagetopic{
+    font-size: 45px;
+    color:hsl(0, 0%, 100%);
+}
+
+main #info .pagedescription{
+    padding-top: 10px;
+    font-size:15px;
+}
+
+main #portfolio{
+    margin-top: 40px;
+}
+
+main #portfolio .projects a{
+    text-decoration: none;
+    font-size: 7.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main #portfolio .projects a .portfolio_name{
+    font-size: 20px;
+    color:hsl(0, 0%, 100%);
+}
+
+main #portfolio .projects a .portfolio_date{
+    font-size: 12.5px;
+    color: hsl(0, 0%, 64%);
+}
+
+main #portfolio .projects a:hover .portfolio_date{
+     color:hsl(0, 0%, 100%);
+}
+
+main #portfolio .projects hr{
+    border-color: hsl(0, 0%, 64%);
+    border-width: 1px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer {
+  
+    text-align: center;
+    padding: 1rem;
+}
+
+
+@media screen and (max-width:700px) {
+    body{
+    display: flow-root;
+    margin-top: 0px;
+    background-color: hsl(0, 0%, 6%);
+    color: hsl(0, 0%, 64%);
+    padding-top: 24px;
+    padding-bottom: 16px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+    
+}
+
+}
