@@ -2,52 +2,42 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sashwat Devkota | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/ico" href="/Images/favicon.ico" />
     <script src="https://kit.fontawesome.com/4531127e67.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-    <header>
+    <div id="vanta-bg"></div>
 
+
+    <header>
         <div class="button">
-            <a href="">
-                <i class="fa-solid fa-house"></i>
-            </a>
+            <a href=""><i class="fa-solid fa-house"></i></a>
         </div>
 
         <div class="sociallinks">
             <ul>
-                <li>
-                    <a href="https://www.linkedin.com" target="_blank">
-                        Linkedin
-                    </a>
+                <li><a href="https://np.linkedin.com" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://github.com" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </li>
+                <li><a href="https://x.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="mailto:fake@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
                 </li>
                 <li>
-                    <a href="https://github.com" target="_blank">
-                        Github
-                    </a>
-                </li>
-                <li>
-                    <a href="https://x.com" target="_blank">
-                        Twitter
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:fake@fake.com" target="_blank">
-                        Contact me
-                    </a>
-                </li>
+                    <button onclick="toggleDarkLightMode()" id="darklightMode"><i
+                            class="fa-solid fa-circle-half-stroke"></i></button></li>
             </ul>
         </div>
-
     </header>
 
-    <main>
 
+    <main>
         <div id="info">
             <div class="pagetopic"><b>Name</b></div>
             <div class="pagedescription" id="skills"></div>
@@ -72,23 +62,16 @@
                 <hr>
             </div>
         </div>
-
     </main>
 
     <footer>
         <div>&copy; | Created by Sashwat Devkota | Thanks for Visiting </div>
     </footer>
 
-    <script>
-        const skills = document.getElementById('skills');
-        const dots = ['.', '..', '...', ''];
-        let i = 0;
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.waves.min.js"></script>
 
-        setInterval(() => {
-            skills.textContent = 'Enter Skills here' + dots[i];
-            i = (i + 1) % dots.length;
-        }, 500);
-    </script>
+    <script src="script.js"></script>
 
 </body>
 

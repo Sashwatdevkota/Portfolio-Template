@@ -6,3 +6,4 @@ Taken inspiration from : https://cs.fyi
 
 ### RECORD 
 30th Aug 2025 : Uploaded to Git
+1st September 2025 : Added a seprate javaScript file for js, added dark mode, added animating background, changed links to icons.

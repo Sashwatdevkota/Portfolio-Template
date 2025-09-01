@@ -1,115 +1,154 @@
-html, body {
+
+html,
+body {
     height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 16px;
+    background-color: hsl(0, 0%, 6%);
+    color: hsl(0, 0%, 100%);
+}
+
+#vanta-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+    padding: 10px 16px;
+    border-radius: 8px;
+}
+
+.button a {
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.sociallinks ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 0;
     margin: 0;
 }
 
-body{
-    display: flex;
-    flex-direction: column;
-    margin-top: 0px;
-    background-color: hsl(0, 0%, 6%);
-    color: hsl(0, 0%, 64%);
-    padding-top: 24px;
-    padding-bottom: 16px;
-    margin-left: 25%;
-    margin-right: 25%;
-
-header{
-    margin-top: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.button a{
+.sociallinks a {
     text-decoration: none;
-    color: hsl(0, 0%, 64%);
-}
-
-.button a i{
-    font-size: 22.5px;
-}
-
-.sociallinks ul{
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.sociallinks a{
-    text-decoration: none;
-    color: hsl(0, 0%, 64%);
     font-size: 15px;
 }
 
-main{
-   margin-top: 80px;
-   flex: 1;
+.sociallinks li button {
+    all: unset;
+    cursor: pointer;
+    border-radius: 4px;
 
 }
 
-main #info .pagetopic{
-    font-size: 45px;
-    color:hsl(0, 0%, 100%);
+
+main {
+    flex: 1;
+    margin-top: 60px;
 }
 
-main #info .pagedescription{
+main #info .pagetopic {
+    font-size: clamp(28px, 6vw, 45px);
+}
+
+main #info .pagedescription {
+    font-size: 15px;
     padding-top: 10px;
-    font-size:15px;
 }
 
-main #portfolio{
+main #portfolio {
     margin-top: 40px;
 }
 
-main #portfolio .projects a{
+main #portfolio .projects a {
     text-decoration: none;
-    font-size: 7.5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 6px 0;
 }
 
-main #portfolio .projects a .portfolio_name{
-    font-size: 20px;
-    color:hsl(0, 0%, 100%);
+main #portfolio .projects a .portfolio_name {
+    font-size: 18px;
 }
 
+main #portfolio .projects a .portfolio_date {
+    font-size: 12px;
+}
+
+
+main #portfolio .projects hr {
+    border: none;
+    border-bottom: 1px solid hsl(0, 0%, 30%);
+    margin: 6px 0;
+}
+
+
+.button a,
+.sociallinks a,
+.sociallinks li button,
+main #info .pagedescription,
 main #portfolio .projects a .portfolio_date{
-    font-size: 12.5px;
     color: hsl(0, 0%, 64%);
 }
 
-main #portfolio .projects a:hover .portfolio_date{
-     color:hsl(0, 0%, 100%);
-}
-
-main #portfolio .projects hr{
-    border-color: hsl(0, 0%, 64%);
-    border-width: 1px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+main #info .pagetopic,
+main #portfolio .projects a .portfolio_name,
+main #portfolio .projects a:hover .portfolio_date {
+    color: hsl(0, 0%, 100%);
 }
 
 footer {
-  
     text-align: center;
     padding: 1rem;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.light-mode {
+    background-color: hsl(0, 0%, 96%);
+    color: hsl(0, 0%, 6%);
+}
+
+.light-mode .button a,
+.light-mode .sociallinks a,
+.light-mode .sociallinks li button,
+.light-mode main #info .pagedescription,
+.light-mode main #portfolio .projects a .portfolio_date {
+    color: hsla(0, 0%, 22%, 0.993);
+}
+
+.light-mode main #info .pagetopic,
+.light-mode main #portfolio .projects a .portfolio_name,
+.light-mode main #portfolio .projects a:hover .portfolio_date {
+    color: hsl(0, 0%, 6%);
 }
 
 
-@media screen and (max-width:700px) {
-    body{
-    display: flow-root;
-    margin-top: 0px;
-    background-color: hsl(0, 0%, 6%);
-    color: hsl(0, 0%, 64%);
-    padding-top: 24px;
-    padding-bottom: 16px;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-    
-}
-
+.light-mode main #portfolio .projects hr {
+    border-bottom: 1px solid hsl(0, 0%, 70%);
 }
